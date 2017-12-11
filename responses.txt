@@ -1,0 +1,2 @@
+/api/v1/namespaces/ns/endpoints/foo 200 getFoo.json
+/api/v1/watch/namespaces/ns/endpoints/foo 400 generic.json

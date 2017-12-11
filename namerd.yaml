@@ -1,0 +1,23 @@
+namers:
+- kind: io.l5d.k8s
+  host: 127.0.0.1
+  port: 5000
+
+storage:
+  kind: io.l5d.inMemory
+  namespaces:
+    ns: |
+      /http => /#/io.l5d.k8s/ns/http;
+
+interfaces:
+- kind: io.l5d.thriftNameInterpreter
+  ip: 0.0.0.0
+  port: 4100
+  retryBaseSecs: 10
+  retryJitterSecs: 5
+- kind: io.l5d.mesh
+  ip: 0.0.0.0
+  port: 4101
+- kind: io.l5d.httpController
+  ip: 0.0.0.0
+  port: 4102

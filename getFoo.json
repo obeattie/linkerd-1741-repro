@@ -1,0 +1,36 @@
+{
+    "apiVersion": "v1",
+    "kind": "Endpoints",
+    "metadata": {
+        "creationTimestamp": "2016-08-01T13:46:05Z",
+        "name": "foo",
+        "namespace": "ns",
+        "resourceVersion": "161365772",
+        "selfLink": "/api/v1/namespaces/ns/endpoints/foo",
+        "uid": "4af9ac0d-57ee-11e6-b028-02ac3122f5a5"
+    },
+    "subsets": [
+        {
+            "addresses": [
+                {
+                    "ip": "1.2.3.4",
+                    "nodeName": "node1",
+                    "targetRef": {
+                        "kind": "Pod",
+                        "name": "foo-1",
+                        "namespace": "ns",
+                        "resourceVersion": "161036360",
+                        "uid": "776ef5e8-de00-11e7-87a8-0277b28dd676"
+                    }
+                }
+            ],
+            "ports": [
+                {
+                    "name": "http",
+                    "port": 80,
+                    "protocol": "TCP"
+                }
+            ]
+        }
+    ]
+}
